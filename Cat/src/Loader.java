@@ -19,8 +19,13 @@ public class Loader
 
         Cat boris = new Cat();
         System.out.println("вес кота Бориса = " + boris.getWeight());
-        boris.feed(boris.getWeight()*0.05);
+        boris.feed(boris.getWeight()*0 + 150.00);
         System.out.println("вес кота Бориса после покормки = " + boris.getWeight());
+        boris.pee();
+        boris.pee();
+        boris.pee();
+        boris.pee();
+        System.out.println("Борис съел " + boris.eaten() + " гр. еды");
 
         for (;musya.getWeight() >= 1000;) {
             musya.meow();
