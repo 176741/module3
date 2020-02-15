@@ -27,8 +27,9 @@ public class Loader
         boris.pee();
         boris.pee();
         System.out.println("Борис съел " + boris.eaten() + " гр. еды");
+        Cat kitten = new Cat(1100.0);
+        System.out.println("Вес котенка = " + kitten.getWeight());
         System.out.println("кошек задано = " + Cat.getCount());
-
         for (;musya.getWeight() >= Cat.MIN_WEIGHT;) {
             musya.meow();
             if(musya.getWeight() <= Cat.MIN_WEIGHT) {

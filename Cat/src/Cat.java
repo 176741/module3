@@ -73,9 +73,12 @@ public class Cat
 
     public boolean getItAlive () { return itAlive; }
 
-    public void setColorCat (colorsCat type)
-    {
+    public void setColorCat (colorsCat type) {}
 
+    public Cat(Double weight)
+    {
+        this();
+        this.weight = weight;
     }
 
     public String getStatus()
