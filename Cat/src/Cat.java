@@ -6,16 +6,14 @@ public class Cat
     private double eaten;
     private static int count;
     private boolean itAlive;
-
-    private double minWeight;
-    private double maxWeight;
+    public static final int MIN_WEIGHT = 1000;
+    public static final int MAX_WEIGHT = 9000;
+    public static final int EYES_COUNT = 2;
 
     public Cat()
     {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
         count = count + 1;
         itAlive = true;
 
@@ -75,21 +73,24 @@ public class Cat
 
     public boolean getItAlive () { return itAlive; }
 
+    public void setColorCat (colorsCat type)
+    {
+
+    }
+
     public String getStatus()
     {
-        if(weight < minWeight) {
+        if(weight < MIN_WEIGHT) {
             count = count - 1;
             itAlive = false;
             return "Dead";
         }
-        else if(weight > maxWeight) {
+        else if(weight > MAX_WEIGHT) {
             count = count - 1;
             itAlive = false;
             return "Exploded";
         }
         else if(weight > originWeight) {
-            count = count - 1;
-            itAlive = false;
             return "Sleeping";
         }
         else {
