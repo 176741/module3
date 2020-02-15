@@ -26,6 +26,7 @@ public class Loader
         boris.pee();
         boris.pee();
         System.out.println("Борис съел " + boris.eaten() + " гр. еды");
+        System.out.println("кошек задано = " + Cat.getCount());
 
         for (;musya.getWeight() >= 1000;) {
             musya.meow();
@@ -40,6 +41,12 @@ public class Loader
                 System.out.println(vasya.getStatus());
             }
         }
+        System.out.println("кошек осталось = " + Cat.getCount());
+        System.out.println(boris.getItAlive());//испытание проверки на живость кошки
+        System.out.println(vasya.getItAlive());
+        boris.pee();
+        vasya.pee();
+
         
     }
 }
