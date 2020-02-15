@@ -29,6 +29,9 @@ public class Loader
         System.out.println("Борис съел " + boris.eaten() + " гр. еды");
         Cat kitten = new Cat(1100.0);
         System.out.println("Вес котенка = " + kitten.getWeight());
+        Cat podkidysh = new Cat(ryzhyk.getWeight(),ryzhyk.getColor());//т.к. эта строчка после кормления рыжика,
+        //то будет показываться вес рыжика после кормпления
+        System.out.println(podkidysh.getWeight()+podkidysh.getColor());//проверка копирования
         System.out.println("кошек задано = " + Cat.getCount());
         for (;musya.getWeight() >= Cat.MIN_WEIGHT;) {
             musya.meow();
@@ -48,6 +51,7 @@ public class Loader
         System.out.println(vasya.getIsAlive());
         boris.pee();
         vasya.pee();
+
 
         
     }

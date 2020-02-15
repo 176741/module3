@@ -76,10 +76,19 @@ public class Cat
 
     public void setColor (String color) { this.color = color;}
 
+    public String getColor () { return color; }
+
     public Cat(Double weight)
     {
         this();
         this.weight = weight;
+    }
+
+    public Cat(Double weight, String color)//в методе будет вписываться вес и цвет той кошки, которая уже задана
+    {
+        this();//мы же "создаем" еще одну кошку
+        this.weight=weight;
+        this.color=color;
     }
 
     public String getStatus()
