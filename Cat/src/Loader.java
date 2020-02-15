@@ -5,20 +5,20 @@ public class Loader
     {
         Cat vasya = new Cat();
         System.out.println("вес кота Васи = " + vasya.getWeight());
-        vasya.setColorCat(colorsCat.BLACK);
+        vasya.setColor("Black");
         Cat musya = new Cat();
         System.out.println("вес кошки Муси = " + musya.getWeight());
-        musya.setColorCat(colorsCat.TRICOLOR);
+        musya.setColor("Tricolor");
         Cat murka = new Cat();
         System.out.println("вес кошки Мурки = " + murka.getWeight());
-        murka.setColorCat(colorsCat.TRICOLOR);
+        murka.setColor("Tricolor");
         Cat ryzhyk = new Cat();
-        ryzhyk.setColorCat(colorsCat.ORANGE);
+        ryzhyk.setColor("Orange");
         System.out.println("вес кота Рыжика = " + ryzhyk.getWeight());
         ryzhyk.feed(ryzhyk.getWeight()*0.05);
         System.out.println("вес кота Рыжика после покормки = " + ryzhyk.getWeight());
         Cat boris = new Cat();
-        boris.setColorCat(colorsCat.WHITE);
+        boris.setColor("White");
         System.out.println("вес кота Бориса = " + boris.getWeight());
         boris.feed(boris.getWeight()*0 + 150.00);
         System.out.println("вес кота Бориса после покормки = " + boris.getWeight());
@@ -44,8 +44,8 @@ public class Loader
             }
         }
         System.out.println("кошек осталось = " + Cat.getCount());
-        System.out.println(boris.getItAlive());//испытание проверки на живость кошки
-        System.out.println(vasya.getItAlive());
+        System.out.println(boris.getIsAlive());//испытание проверки на живость кошки
+        System.out.println(vasya.getIsAlive());
         boris.pee();
         vasya.pee();
 

@@ -5,23 +5,24 @@ public class Cat
     private double weight;
     private double eaten;
     private static int count;
-    private boolean itAlive;
+    private boolean isAlive;
     public static final int MIN_WEIGHT = 1000;
     public static final int MAX_WEIGHT = 9000;
     public static final int EYES_COUNT = 2;
+    private String color;
 
     public Cat()
     {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         count = count + 1;
-        itAlive = true;
+        isAlive = true;
 
     }
 
     public void meow()
     {
-        if(itAlive == false) {
+        if(isAlive == false) {
             System.out.println("довели бедняжку...");
         } else {
             weight = weight - 100;
@@ -31,7 +32,7 @@ public class Cat
 
     public void feed(Double amount)
     {
-        if(itAlive == false)
+        if(isAlive == false)
         {
             System.out.println("довели бедняжку...");
         } else {
@@ -44,7 +45,7 @@ public class Cat
 
     public void drink(Double amount)
     {
-        if(itAlive == false)
+        if(isAlive == false)
         {
             System.out.println("довели бедняжку...");
         } else {
@@ -54,7 +55,7 @@ public class Cat
 
     public void pee ()
     {
-        if(itAlive == false)
+        if(isAlive == false)
         {
             System.out.println("довели бедняжку...");
         } else {
@@ -71,9 +72,9 @@ public class Cat
 
     public static int getCount () { return count; }
 
-    public boolean getItAlive () { return itAlive; }
+    public boolean getIsAlive () { return isAlive; }
 
-    public void setColorCat (colorsCat type) {}
+    public void setColor (String color) { this.color = color;}
 
     public Cat(Double weight)
     {
@@ -85,12 +86,12 @@ public class Cat
     {
         if(weight < MIN_WEIGHT) {
             count = count - 1;
-            itAlive = false;
+            isAlive = false;
             return "Dead";
         }
         else if(weight > MAX_WEIGHT) {
             count = count - 1;
-            itAlive = false;
+            isAlive = false;
             return "Exploded";
         }
         else if(weight > originWeight) {
